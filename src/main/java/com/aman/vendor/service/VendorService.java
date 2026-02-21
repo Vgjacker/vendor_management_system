@@ -25,9 +25,9 @@ public class VendorService {
         return vendorRepository.findAll();
     }
     public Vendor getById(Long id){
-        Optional<Vendor> wallet = vendorRepository.findById(id);
-        if(wallet.isPresent()) {
-            return wallet.get();
+        Optional<Vendor> vendor = vendorRepository.findById(id);
+        if(vendor.isPresent()) {
+            return vendor.get();
         }
         //TODO
         throw new VendorException("Wallet with "+id+" does not exist");
@@ -44,9 +44,9 @@ public class VendorService {
     }
 
     public boolean delete(Long id){
-        Optional<Vendor> wallet = vendorRepository.findById(id);
-        if(wallet.isPresent()) {
-            vendorRepository.delete(wallet.get());
+        Optional<Vendor> vendor = vendorRepository.findById(id);
+        if(vendor.isPresent()) {
+            vendorRepository.delete(vendor.get());
             return true;
         }
         //TODO

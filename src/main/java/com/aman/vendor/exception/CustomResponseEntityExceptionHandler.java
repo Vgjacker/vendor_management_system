@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler
     public final ResponseEntity<?> handleWalletException(VendorException ex, WebRequest request){
-        VendorWalletExceptionResponse response = new VendorWalletExceptionResponse(ex.getMessage());
-        return new ResponseEntity<VendorWalletExceptionResponse>(response, HttpStatus.BAD_REQUEST);
+        VendorExceptionResponse response = new VendorExceptionResponse(ex.getMessage());
+        return new ResponseEntity<VendorExceptionResponse>(response, HttpStatus.BAD_REQUEST);
     }
 }

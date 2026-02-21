@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class VendorWalletExceptionResponse {
+public class VendorExceptionResponse {
     private String id;
 
 }

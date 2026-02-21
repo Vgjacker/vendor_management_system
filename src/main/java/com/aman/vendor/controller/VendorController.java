@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/wallet")
+@RequestMapping("/vendor")
 public class VendorController {
 
     @Autowired
